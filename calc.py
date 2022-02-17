@@ -15,7 +15,7 @@ class MyLayout(Widget):
 
     # Create button pressing function
     def button_press(self, button):
-        # Create variable that contains whatever was in the textboc already
+        # Create variable that contains whatever was in the textbox already
         prior = self.ids.calc_input.text
 
         # Determine if 0 is sitting there
@@ -27,28 +27,28 @@ class MyLayout(Widget):
 
     # Create addition function
     def add(self):
-        # Create variable that contains whatever was in the textboc already
+        # Create variable that contains whatever was in the textbox already
         prior = self.ids.calc_input.text
         # Slap a plus sign to the textinput
         self.ids.calc_input.text = f"{prior}+"
 
     # Create subtraction function
     def subtract(self):
-        # Create variable that contains whatever was in the textboc already
+        # Create variable that contains whatever was in the textbox already
         prior = self.ids.calc_input.text
         # Slap a minus sign to the textinput
         self.ids.calc_input.text = f"{prior}-"
 
     # Create multiplication function
     def multiply(self):
-        # Create variable that contains whatever was in the textboc already
+        # Create variable that contains whatever was in the textbox already
         prior = self.ids.calc_input.text
         # Slap a cross sign to the textinput
         self.ids.calc_input.text = f"{prior}×"
 
     # Create divisoin function
     def divide(self):
-        # Create variable that contains whatever was in the textboc already
+        # Create variable that contains whatever was in the textbox already
         prior = self.ids.calc_input.text
         # Slap a divided by sign to the textinput
         self.ids.calc_input.text = f"{prior}÷"
