@@ -1,0 +1,165 @@
+#: import utils kivy.utils
+
+<Button>
+	font_size: 25
+	background_normal: ''
+	background_color: utils.get_color_from_hex('#1d1f24')
+
+<MyLayout>
+	
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+
+		TextInput:
+			id: calc_input
+			text: '0'
+			halign: 'right'
+			font_size: 40
+			size_hint: 1, .20
+			background_normal: ''
+			background_color: utils.get_color_from_hex('#25272e')
+			foreground_color: utils.get_color_from_hex('#eeeeee')
+
+		GridLayout:
+			spacing: 0.5
+			cols: 4
+			rows: 5
+
+			#row
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '%'
+			
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: 'CE'
+
+			Button:
+				id: clear
+				size_hint: .2, .2
+				font_size: 20
+				text: 'C'
+				#background_color: utils.get_color_from_hex('#ad3434')
+				on_press: root.clear()
+
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '÷'
+				on_press: root.divide()
+
+			#row
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '7'
+				background_color: utils.get_color_from_hex('#25272e')
+				on_press: root.button_press(7)
+
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '8'
+				background_color: utils.get_color_from_hex('#25272e')
+				on_press: root.button_press(8)
+
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '9'
+				background_color: utils.get_color_from_hex('#25272e')
+				on_press: root.button_press(9)
+
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '×'
+				on_press: root.multiply()
+
+			#row
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '4'
+				background_color: utils.get_color_from_hex('#25272e')
+				on_press: root.button_press(4)
+			
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '5'
+				background_color: utils.get_color_from_hex('#25272e')
+				on_press: root.button_press(5)
+
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '6'
+				background_color: utils.get_color_from_hex('#25272e')
+				on_press: root.button_press(6)
+
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '-'
+				on_press: root.subtract()
+
+			#row
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '1'
+				background_color: utils.get_color_from_hex('#25272e')
+				on_press: root.button_press(1)
+			
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '2'
+				background_color: utils.get_color_from_hex('#25272e')
+				on_press: root.button_press(2)
+
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '3'
+				background_color: utils.get_color_from_hex('#25272e')
+				on_press: root.button_press(3)
+
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '+'
+				on_press: root.add()
+
+			#row
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '±'
+				background_color: utils.get_color_from_hex('#25272e')
+			
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '0'
+				background_color: utils.get_color_from_hex('#25272e')
+				on_press: root.button_press(0)
+
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '.'
+				background_color: utils.get_color_from_hex('#25272e')
+
+			Button:
+				size_hint: .2, .2
+				font_size: 20
+				text: '='
+				background_color: utils.get_color_from_hex('#3460ad')
+				on_press: root.equals()
+
+
