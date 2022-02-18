@@ -33,11 +33,6 @@
 				text: '%'
 			
 			Button:
-				size_hint: .2, .2
-				font_size: 20
-				text: 'CE'
-
-			Button:
 				id: clear
 				size_hint: .2, .2
 				font_size: 20
@@ -48,8 +43,14 @@
 			Button:
 				size_hint: .2, .2
 				font_size: 20
+				text: u'\u00AB' #remove sign
+				on_press: root.remove()
+
+			Button:
+				size_hint: .2, .2
+				font_size: 20
 				text: '÷'
-				on_press: root.divide()
+				on_press: root.math_sign("÷")
 
 			#row
 			Button:
@@ -77,7 +78,7 @@
 				size_hint: .2, .2
 				font_size: 20
 				text: '×'
-				on_press: root.multiply()
+				on_press: root.math_sign("×")
 
 			#row
 			Button:
@@ -105,7 +106,7 @@
 				size_hint: .2, .2
 				font_size: 20
 				text: '-'
-				on_press: root.subtract()
+				on_press: root.math_sign("-")
 
 			#row
 			Button:
@@ -133,7 +134,7 @@
 				size_hint: .2, .2
 				font_size: 20
 				text: '+'
-				on_press: root.add()
+				on_press: root.math_sign("+")
 
 			#row
 			Button:
@@ -141,7 +142,8 @@
 				font_size: 20
 				text: '±'
 				background_color: utils.get_color_from_hex('#25272e')
-			
+				on_press: root.pos_neg()
+				
 			Button:
 				size_hint: .2, .2
 				font_size: 20
@@ -154,6 +156,7 @@
 				font_size: 20
 				text: '.'
 				background_color: utils.get_color_from_hex('#25272e')
+				on_press: root.dot()
 
 			Button:
 				size_hint: .2, .2
