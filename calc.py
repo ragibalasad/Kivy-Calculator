@@ -39,11 +39,11 @@ class MyLayout(Widget):
             if len(prior) == 0:
                 self.ids.calc_input.text = "0"
 
-    # Create function to make the number positive or nagative
+    # Create function to make the number positive or negative
     def pos_neg(self):
         prior = self.ids.calc_input.text
 
-        # Check if there's already a nagative sign
+        # Check if there's already a negative sign
         if "-" in prior:
             self.ids.calc_input.text = f"{prior.replace('-','')}"
         else:
